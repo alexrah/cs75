@@ -1,3 +1,5 @@
 RewriteEngine Off
 RewriteCond %{HTTP_HOST} ^cs75\.test$ [NC]
 RewriteRule (.*) http://www.fellineimpianti.it/$1 [R=302,L]
+
+# RewriteCond %{HTTP}

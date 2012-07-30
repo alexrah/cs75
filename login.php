@@ -12,10 +12,12 @@ define("PASS", "pippa");
 if (isset($_POST["user"]) && isset($_POST["pass"]))
 {
   // if user & pass are valid, log user in
-  if (isset($_POST["user"]) == USER && isset($_POST["pass"]) == PASS)
+  if ($_POST["user"] == USER && $_POST["pass"] == PASS)
   {
     // remember that users logged in
     $_SESSION["authenticated"] = TRUE;
+    setcookie("user", $_POST["user"] , time() + 7 * 24 * 60 * 60 );
+    setcookie("pass", $_POST["pass"] , time() + 7 * 24 * 60 * 60 );
     // redirect user to home page, using absolute path, per //
     // http://us2.php.net/manual/en/function.header.php
     $host = $_SERVER["HTTP_HOST"];
@@ -37,7 +39,7 @@ if (isset($_POST["user"]) && isset($_POST["pass"]))
 	<tr>
 		<td>Username:</td>
 		<td>
-			<input type="text" name="user"  />
+    <input type="text" name="user" value="<? echo ($_POST["user"]) ? $_POST["user"] : $_COOKIE["user"]; ?>" />
 		</td></tr>
 		<tr>
 			<td>Password:</td>

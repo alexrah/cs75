@@ -9,7 +9,8 @@
   if ($_SESSION["authenticated"]) { ?> 
   You are logged in  <a href="logout.php">log out</a>
    <? } else {?>
-   <br />
    You are not logged in <? } ?>
+  <br />
+  <a href="login.php">Go to login page</a>
 </body>
 </html>

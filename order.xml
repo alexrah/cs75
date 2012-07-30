@@ -1,0 +1,16 @@
+<order>
+  <sold-to>
+    <person id="123">
+      <lastname>Malan</lastname>
+      <firstname>David</firstname>
+    </person>
+  </sold-to>
+  <sold-on>20050621</sold-on>
+  <item>
+    <price currency="dollar">29.95</price>
+    <book>
+      <title>Harry Potter</title>
+      <author>J.K. Rowling</author>
+    </book>
+  </item>
+</order>
